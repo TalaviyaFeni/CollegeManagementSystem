@@ -52,7 +52,7 @@ dotnet run
 ```
 
 Now open in browser:  
-👉 http://localhost:5001  
+👉http://localhost:5001  
 
 ---
 
