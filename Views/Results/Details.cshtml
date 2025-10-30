@@ -1,0 +1,16 @@
+@model CollegeManagementSystem.Models.Result
+<h2>View Result</h2>
+<dl class="row">
+    <dt class="col-sm-3">Student Name</dt>
+    <dd class="col-sm-9">@Model.StudentName</dd>
+
+    <dt class="col-sm-3">Subject</dt>
+    <dd class="col-sm-9">@Model.Subject</dd>
+
+    <dt class="col-sm-3">Marks</dt>
+    <dd class="col-sm-9">@Model.Marks</dd>
+
+    <dt class="col-sm-3">Grade</dt>
+    <dd class="col-sm-9">@Model.Grade</dd>
+</dl>
+<a asp-action="Index" class="btn btn-secondary">Back</a>

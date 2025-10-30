@@ -1,0 +1,37 @@
+@model CollegeManagementSystem.Models.Student
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="EnrollmentNumber"></label>
+        <input asp-for="EnrollmentNumber" class="form-control" />
+        <span asp-validation-for="EnrollmentNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="DepartmentName"></label>
+        <input asp-for="DepartmentName" class="form-control" placeholder="Enter department name" />
+        <span asp-validation-for="DepartmentName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="AdmissionDate"></label>
+        <input asp-for="AdmissionDate" class="form-control" type="date" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

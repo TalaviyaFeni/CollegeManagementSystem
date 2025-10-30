@@ -1,0 +1,13 @@
+@model CollegeManagementSystem.Models.Student
+
+<h2>Student Profile</h2>
+
+<div class="card p-3 shadow">
+    <h4>@Model.Name</h4>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Enrollment Number:</strong> @Model.EnrollmentNumber</p>
+    <p><strong>Department:</strong> @Model.DepartmentName</p>
+    <p><strong>Admission Date:</strong> @Model.AdmissionDate.ToShortDateString()</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>

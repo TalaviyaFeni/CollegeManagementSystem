@@ -1,0 +1,35 @@
+@model CollegeManagementSystem.Models.Faculty
+
+@{
+    ViewData["Title"] = "Faculty Details";
+}
+
+<div class="container mt-4">
+    <h2>👁️ Faculty Details</h2>
+
+    <div class="card shadow-sm p-4 rounded-3">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+
+            
+
+            <dt class="col-sm-3">Designation</dt>
+            <dd class="col-sm-9">@Model.Designation</dd>
+
+            <dt class="col-sm-3">Department</dt>
+            <dd class="col-sm-9">@Model.DepartmentName</dd>
+
+            <dt class="col-sm-3">Date of Joining</dt>
+            <dd class="col-sm-9">@(Model.DateOfJoining?.ToShortDateString() ?? "N/A")</dd>
+        </dl>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">✏️ Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">🔙 Back to List</a>
+    </div>
+</div>

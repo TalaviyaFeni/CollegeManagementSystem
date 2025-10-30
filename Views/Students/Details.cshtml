@@ -1,0 +1,14 @@
+@model CollegeManagementSystem.Models.Student
+
+<h2>Student Details</h2>
+
+<div class="card p-3">
+    <h4>@Model.Name</h4>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Enrollment No:</strong> @Model.EnrollmentNumber</p>
+    <p><strong>Department:</strong> @Model.DepartmentName</p>
+    <p><strong>Admission Date:</strong> @Model.AdmissionDate.ToShortDateString()</p>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning mt-3">Edit</a>

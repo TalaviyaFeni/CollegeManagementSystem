@@ -1,0 +1,22 @@
+@model CollegeManagementSystem.Models.Result
+
+<h2>Delete Result</h2>
+
+<h4>Are you sure you want to delete this?</h4>
+
+<dl class="row">
+    <dt class="col-sm-3">Student Name</dt>
+    <dd class="col-sm-9">@Model.StudentName</dd>
+    <dt class="col-sm-3">Subject</dt>
+    <dd class="col-sm-9">@Model.Subject</dd>
+    <dt class="col-sm-3">Marks</dt>
+    <dd class="col-sm-9">@Model.Marks</dd>
+    <dt class="col-sm-3">Grade</dt>
+    <dd class="col-sm-9">@Model.Grade</dd>
+</dl>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">🗑️ Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

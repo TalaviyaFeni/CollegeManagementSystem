@@ -1,0 +1,27 @@
+@model CollegeManagementSystem.Models.Course
+
+@{
+    ViewData["Title"] = "Delete Course";
+}
+
+<h2>Delete Course 🗑️</h2>
+
+<h4>Are you sure you want to delete this course?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Course Name</dt>
+    <dd class="col-sm-9">@Model.CourseName</dd>
+
+    <dt class="col-sm-3">Department</dt>
+    <dd class="col-sm-9">@Model.DepartmentName</dd>
+
+    <dt class="col-sm-3">Credits</dt>
+    <dd class="col-sm-9">@Model.Credits</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

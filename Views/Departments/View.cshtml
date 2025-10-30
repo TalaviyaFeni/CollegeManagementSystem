@@ -1,0 +1,24 @@
+@model CollegeManagementSystem.Models.Department
+
+@{
+    ViewData["Title"] = "View Department";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">👁️ View Department Details</h2>
+
+    <div class="card shadow-sm p-4 rounded-3">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Department Name</dt>
+            <dd class="col-sm-9">@Model.DepartmentName</dd>
+
+            <dt class="col-sm-3">Description</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+        </dl>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">✏️ Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">🔙 Back to List</a>
+    </div>
+</div>
